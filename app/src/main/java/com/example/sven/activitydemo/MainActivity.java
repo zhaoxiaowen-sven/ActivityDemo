@@ -39,7 +39,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showDialogActivity(View view) {
-        Intent intent =  new Intent(this,SecondActivity.class);
+        Intent intent =  new Intent(this,TransParent.class);
+        startActivity(intent);
+    }
+
+    public void startSelf(View view){
+        Intent intent =  new Intent(this,MainActivity.class);
         startActivity(intent);
     }
 

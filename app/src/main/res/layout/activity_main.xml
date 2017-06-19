@@ -11,6 +11,12 @@
         android:layout_height="wrap_content"
         android:onClick="showDialogActivity"
         android:text="显示对话框Activity" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="startSelf"
+        android:onClick="startSelf"
+        />
     <EditText
         android:id="@+id/edit_content"
         android:layout_width="200dp"
