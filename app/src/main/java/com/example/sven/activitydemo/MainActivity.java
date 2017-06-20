@@ -21,30 +21,35 @@ public class MainActivity extends AppCompatActivity {
         Log.i(TAG, "onSaveInstanceState...");
         super.onSaveInstanceState(outState);
         String s = editText.getText().toString();
-        outState.putString(EDIT_TAG,s);
+        outState.putString(EDIT_TAG, s);
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         Log.i(TAG, "onRestoreInstanceState...");
-        //onCreate 或者这里恢复数据均可
+        // onCreate 或者这里恢复数据均可
         editText.setText(savedInstanceState.getString(EDIT_TAG));
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        Log.i(TAG, "onConfigurationChanged..."+newConfig.toString());
+        Log.i(TAG, "onConfigurationChanged..." + newConfig.toString());
     }
 
     public void showDialogActivity(View view) {
-        Intent intent =  new Intent(this,TransParent.class);
+        Intent intent = new Intent(this, TransParent.class);
         startActivity(intent);
     }
 
-    public void startSelf(View view){
-        Intent intent =  new Intent(this,MainActivity.class);
+    public void startSelf(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void startSecond(View view) {
+        Intent intent = new Intent(this, SecondActivity.class);
         startActivity(intent);
     }
 
@@ -54,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.i(TAG, "onCreate...");
         editText = (EditText) findViewById(R.id.edit_content);
-        if (savedInstanceState != null){
+        if (savedInstanceState != null) {
             Log.i(TAG, "onCreate savedInstanceState is not null");
             editText.setText(savedInstanceState.getString(EDIT_TAG));
         }

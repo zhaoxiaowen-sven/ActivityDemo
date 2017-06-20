@@ -20,9 +20,10 @@
         </activity>
         <activity
             android:name=".SecondActivity"
-            android:theme="@style/Theme.AppCompat.Dialog" />
+            android:launchMode="singleTask"
+            android:taskAffinity="com.example.sven.activitydemo.second" />
         <activity android:name=".ThirdActivity" />
-        <activity android:name=".TransParent"></activity>
+        <activity android:name=".TransParent"/>
     </application>
 
 </manifest>

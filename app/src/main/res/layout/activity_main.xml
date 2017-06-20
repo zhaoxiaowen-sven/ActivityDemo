@@ -15,8 +15,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="startSelf"
-        android:onClick="startSelf"
-        />
+        android:onClick="startSelf" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="startSecond"
+        android:onClick="startSecond" />
     <EditText
         android:id="@+id/edit_content"
         android:layout_width="200dp"
