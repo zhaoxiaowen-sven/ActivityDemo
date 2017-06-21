@@ -53,6 +53,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void startThird(View view) {
+        Intent intent = new Intent(this, ThirdActivity.class);
+        startActivity(intent);
+    }
+
+    public void startSecondCopy(View view) {
+        Intent intent = new Intent("com.example.sven.activitydemo.second.copy");
+        startActivity(intent);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
