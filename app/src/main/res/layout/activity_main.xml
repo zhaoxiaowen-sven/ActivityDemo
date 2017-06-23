@@ -27,8 +27,20 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="startSecondClearTop"
+        android:text="startSecondClearTop" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:onClick="startThird"
         android:text="startThird" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="startFourth"
+        android:text="startFourth" />
 
     <Button
         android:layout_width="wrap_content"

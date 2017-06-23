@@ -53,6 +53,29 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void startSecondClearTop(View view) {
+        Intent intent = new Intent(this, SecondActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+
+    public void startFourth(View view) {
+        Intent intent = new Intent("com.example.sven.activitydemo.fourth");
+        // intent.putExtra()
+        // Bundle b = new Bundle(）;
+        // b.putString("screen","1");
+        // intent.putExtras(b);
+
+        // intent.addCategory("android.intent.category.fourth");
+        // intent.addCategory("xxxx");
+        // intent.setData(Uri.parse("http://www.baidu.com:80/search/info"));
+//        intent.setDataAndType(Uri.parse("file://abc"), "text/plain");
+        // if(this.getPackageManager().resolveActivity(intent, 0) != null){
+        startActivity(intent);
+        // }
+
+    }
+
     public void startThird(View view) {
         Intent intent = new Intent(this, ThirdActivity.class);
         startActivity(intent);
