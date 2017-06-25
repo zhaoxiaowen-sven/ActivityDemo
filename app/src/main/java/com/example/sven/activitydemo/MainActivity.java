@@ -3,6 +3,7 @@ package com.example.sven.activitydemo;
 
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -60,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startFourth(View view) {
-        Intent intent = new Intent("com.example.sven.activitydemo.fourth");
+        Intent intent = new Intent("com.example.sven.activitydemo.fourth3");
         // intent.putExtra()
         // Bundle b = new Bundle(）;
         // b.putString("screen","1");
@@ -69,7 +70,12 @@ public class MainActivity extends AppCompatActivity {
         // intent.addCategory("android.intent.category.fourth");
         // intent.addCategory("xxxx");
         // intent.setData(Uri.parse("http://www.baidu.com:80/search/info"));
-//        intent.setDataAndType(Uri.parse("file://abc"), "text/plain");
+        // intent.setDataAndType(Uri.parse("http://abc"), "image/jpeg");
+        intent.setDataAndType(Uri.parse("file://abc"), "image/png");
+        // intent.setType("text/plain");
+
+        Log.i(TAG, intent.toString());
+        // 查找intent
         // if(this.getPackageManager().resolveActivity(intent, 0) != null){
         startActivity(intent);
         // }
